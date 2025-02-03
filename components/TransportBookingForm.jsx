@@ -1,18 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styles from "@/app/TransportBookingForm.module.css";
+import {
+  setServiceType,
+  setTripType,
+  setFromLocation,
+  setToLocation,
+  setPickUpDate,
+  setReturnDate,
+  setPickUpTime,
+} from "@/store/transportBookingSlice";
 
 const TransportBookingForm = () => {
-  // Initialize state values to ensure controlled inputs.
-  const [serviceType, setServiceType] = useState("outstation");
-  const [tripType, setTripType] = useState("oneWay");
-  const [fromLocation, setFromLocation] = useState("");
-  const [toLocation, setToLocation] = useState("");
-  const [pickUpDate, setPickUpDate] = useState("");
-  const [returnDate, setReturnDate] = useState("");
-  const [pickUpTime, setPickUpTime] = useState("");
+  const dispatch = useDispatch();
+  const booking = useSelector((state) => state.booking);
 
-  console.log(fromLocation, toLocation, pickUpDate, returnDate, pickUpTime);
+  console.log(
+    booking.fromLocation,
+    booking.toLocation,
+    booking.pickUpDate,
+    booking.returnDate,
+    booking.pickUpTime
+  );
 
   return (
     <div className={styles.formContainer}>
@@ -21,25 +30,25 @@ const TransportBookingForm = () => {
         <div className={styles.serviceTypes}>
           <button
             className={`${styles.serviceButton} ${
-              serviceType === "outstation" ? styles.active : ""
+              booking.serviceType === "outstation" ? styles.active : ""
             }`}
-            onClick={() => setServiceType("outstation")}
+            onClick={() => dispatch(setServiceType("outstation"))}
           >
             Outstation
           </button>
           <button
             className={`${styles.serviceButton} ${
-              serviceType === "local" ? styles.active : ""
+              booking.serviceType === "local" ? styles.active : ""
             }`}
-            onClick={() => setServiceType("local")}
+            onClick={() => dispatch(setServiceType("local"))}
           >
             Local
           </button>
           <button
             className={`${styles.serviceButton} ${
-              serviceType === "airport" ? styles.active : ""
+              booking.serviceType === "airport" ? styles.active : ""
             }`}
-            onClick={() => setServiceType("airport")}
+            onClick={() => dispatch(setServiceType("airport"))}
           >
             Airport
           </button>
@@ -49,17 +58,17 @@ const TransportBookingForm = () => {
         <div className={styles.tripTypes}>
           <button
             className={`${styles.tripButton} ${
-              tripType === "oneWay" ? styles.active : ""
+              booking.tripType === "oneWay" ? styles.active : ""
             }`}
-            onClick={() => setTripType("oneWay")}
+            onClick={() => dispatch(setTripType("oneWay"))}
           >
             One Way
           </button>
           <button
             className={`${styles.tripButton} ${
-              tripType === "roundTrip" ? styles.active : ""
+              booking.tripType === "roundTrip" ? styles.active : ""
             }`}
-            onClick={() => setTripType("roundTrip")}
+            onClick={() => dispatch(setTripType("roundTrip"))}
           >
             Round Trip
           </button>
@@ -71,8 +80,8 @@ const TransportBookingForm = () => {
             <div className={styles.inputField}>
               <label>FROM</label>
               <select
-                value={fromLocation}
-                onChange={(e) => setFromLocation(e.target.value)}
+                value={booking.fromLocation}
+                onChange={(e) => dispatch(setFromLocation(e.target.value))}
               >
                 <option value="" disabled>
                   Select pickup location
@@ -86,8 +95,8 @@ const TransportBookingForm = () => {
             <div className={styles.inputField}>
               <label>TO</label>
               <select
-                value={toLocation}
-                onChange={(e) => setToLocation(e.target.value)}
+                value={booking.toLocation}
+                onChange={(e) => dispatch(setToLocation(e.target.value))}
               >
                 <option value="" disabled>
                   Select drop location
@@ -105,17 +114,17 @@ const TransportBookingForm = () => {
               <label>PICK UP DATE</label>
               <input
                 type="date"
-                value={pickUpDate}
-                onChange={(e) => setPickUpDate(e.target.value)}
+                value={booking.pickUpDate}
+                onChange={(e) => dispatch(setPickUpDate(e.target.value))}
               />
             </div>
-            {tripType === "roundTrip" && (
+            {booking.tripType === "roundTrip" && (
               <div className={styles.inputField}>
                 <label>RETURN DATE</label>
                 <input
                   type="date"
-                  value={returnDate}
-                  onChange={(e) => setReturnDate(e.target.value)}
+                  value={booking.returnDate}
+                  onChange={(e) => dispatch(setReturnDate(e.target.value))}
                 />
               </div>
             )}
@@ -123,8 +132,8 @@ const TransportBookingForm = () => {
               <label>PICK UP AT</label>
               <input
                 type="time"
-                value={pickUpTime}
-                onChange={(e) => setPickUpTime(e.target.value)}
+                value={booking.pickUpTime}
+                onChange={(e) => dispatch(setPickUpTime(e.target.value))}
               />
             </div>
           </div>
