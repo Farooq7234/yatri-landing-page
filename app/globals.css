@@ -46,8 +46,8 @@ header {
 .ellipse{
   position: absolute;
   z-index: -1;
-  top: -250;
-  left: -400;
+  top: -250px;
+  left: -400px;
   width: 1000px;
 }
 
