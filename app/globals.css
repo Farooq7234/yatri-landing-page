@@ -30,7 +30,6 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-image: url('../public/hero-background.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;

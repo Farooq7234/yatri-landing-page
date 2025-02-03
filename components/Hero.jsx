@@ -4,7 +4,10 @@ import TransportBookingForm from "@/components/TransportBookingForm";
 const Hero = () => {
   return (
     <section>
-      <div className="hero-section">
+      <div
+        className="hero-section"
+        style={{ backgroundImage: "url('hero-background.png')" }}
+      >
         <div className="hero-section-left">
           <h2>
             India's <span> Leading One</span>
