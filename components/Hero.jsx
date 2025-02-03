@@ -9,6 +9,7 @@ const Hero = () => {
         style={{ backgroundImage: "url('hero-background.png')" }}
       >
         <div className="hero-section-left">
+          <img src="/ellipse.png" className="ellipse" alt="" />
           <h2>
             India's <span> Leading One</span>
           </h2>

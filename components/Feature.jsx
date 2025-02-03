@@ -11,7 +11,7 @@ const Feature = () => {
     <section>
       <div className="feature-section">
         <div className="feature-card">
-          <HelpingHand className="feature-icon" size={70} />
+          <img src="/hand.png" alt="" />
           <h2>Return Fare, Not Fair!</h2>
           <p>
             Why Pay for Return Journey when you are travelling oneway? Now get
@@ -20,7 +20,7 @@ const Feature = () => {
           </p>
         </div>
         <div className="feature-card">
-          <MapPin className="feature-icon" size={70} />
+          <img src="/location.png" alt="" />
           <h2>GPS Based Billing System</h2>
           <p>
             Since the GPS data captures the actual distance and time traveled,
@@ -29,7 +29,7 @@ const Feature = () => {
           </p>
         </div>
         <div className="feature-card">
-          <CarFront className="feature-icon" size={70} />
+          <img src="/driving.png" alt="" />
           <h2>Now available routes are!</h2>
           <p>Lucknow | Gorakhpur | Varanasi | Ayodhya | Allahabad | Kanpur</p>
         </div>

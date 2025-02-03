@@ -34,7 +34,23 @@ header {
   background-size: cover;
   height: 100vh;
   padding: 20px;
+  overflow: hidden;
 }
+
+.hero-section-left{
+  position: relative;
+  color: white;
+  z-index: 10;
+}
+
+.ellipse{
+  position: absolute;
+  z-index: -1;
+  top: -250;
+  left: -400;
+  width: 1000px;
+}
+
 .hero-section-left h2 {
   font-size: 6vmin;
   text-transform: uppercase;
@@ -46,6 +62,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 .hero-section-bottom {
   position: relative;
@@ -82,8 +100,16 @@ header {
   padding-right: 20px;
   margin-bottom: 20px;
 }
-.feature-icon {
-  color: #45d203;
+
+.feature-card:last-child {
+  border-right: none;
+}
+
+
+.feature-card h2 {
+  font-size: 25px;
+  color: #216900;
+  text-transform: uppercase;
 }
 .feature-section-bottom {
   text-align: center;
@@ -160,6 +186,7 @@ header {
   font-size: 16px;
   margin-top: -30px;
   background-color: #d5f2c8;
+  color: #585858;
   padding: 40px;
   flex: 1;
 }
@@ -176,21 +203,30 @@ header {
   padding: 0 20px;
 }
 
+.choose-section-text h2{
+  font-size: 30px;
+  color: #585858;
+}
+
+.choose-section span{
+  color: #216900;
+}
 
 .choose-text-para {
   font-size: 15px;
   margin-top: 10px;
   width: 600px;
+  color: #585858;
 }
 
 /* ONE WAY CLUB SECTION */
 .one-way-club-section {
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 .one-way-club-section h2 {
   color: #216900;
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
 }
 .one-way-club-cards {
   display: flex;
@@ -201,7 +237,6 @@ header {
 }
 .one-way-club-card {
   width: 400px;
-  height: 200px;
   padding: 20px;
   background: #f2efef;
   border-radius: 10px;
@@ -216,7 +251,7 @@ header {
 }
 .one-way-club-card-img img {
   width: 400px;
-  height: 200px;
+
   border-radius: 10px;
   background-color: #fff;
 }
@@ -226,8 +261,13 @@ header {
   padding: 0 20px;
   font-size: 30px;
   text-transform: uppercase;
-  font-weight: 400;
+  font-weight: bold;
   color: #71766f;
+
+}
+
+.one-way-club-features-text span{
+  color: #216900;
 }
 
 /* FAQ SECTION */
@@ -247,6 +287,7 @@ header {
 }
 .faq-content {
   display: flex;
+  color: #585858;
   justify-content: space-around;
   align-items: center;
   padding: 20px 40px;
@@ -256,11 +297,11 @@ header {
   flex-wrap: wrap;
 }
 .faq-content ul {
-  list-style: circle;
+  list-style: disc;
   padding-left: 20px;
 }
 .faq-content ul li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 /* FOOTER SECTION */
@@ -368,19 +409,20 @@ header {
   }
   
   /* Service and feature sections */
+
   .service-main, 
   .service-section-b-cards, 
   .one-way-club-cards, 
   .faq-content {
     flex-direction: column;
-  }
+  }     
 
   .service-section-b-cards{
     flex-wrap: wrap;
   }
 
   .service-main{
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }

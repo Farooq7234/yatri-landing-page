@@ -5,7 +5,9 @@ const Choose = () => {
     <section className="choose-section">
       <div className="choose-section-text">
         <h2>WHY CHOOSE AC BUS OR AC TRAIN</h2>
-        <h2>FOR YOUR OWN WAY JOURNEY?</h2>
+        <h2>
+          FOR YOUR <span> ONE WAY JOURNEY</span>?
+        </h2>
         <p className="choose-text-para">
           Our oneway Car Rental service is cheaper than AC bus and 2-tier AC
           train ticket fares. It reduces your travel time, and you travel in

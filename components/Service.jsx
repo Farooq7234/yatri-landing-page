@@ -5,13 +5,13 @@ const Service = () => {
     <>
       <section className="service-section">
         <div className="service-main">
-          <img src="/rental-car.png" alt="" width={500} />
+          <img src="/rental-car.png" alt="" width={550} />
           <div className="service-cards">
             <h2>
               <span>WHY</span> YATRI ?
             </h2>
             <div className="service-card">
-              <Flag size={85} />
+              <img src="/flag.png" alt="" />
               <div className="service-card-text">
                 <h4>Fast response time</h4>
                 <p>
@@ -22,7 +22,7 @@ const Service = () => {
               </div>
             </div>
             <div className="service-card">
-              <Users size={85} />
+              <img src="/people.png" alt="" />
               <div className="service-card-text">
                 <h4>Vast fleet</h4>
                 <p>
@@ -33,7 +33,8 @@ const Service = () => {
               </div>
             </div>
             <div className="service-card">
-              <Smartphone size={85} />
+              <img src="/mobile.png" alt="" />
+
               <div className="service-card-text">
                 <h4>Easy to order</h4>
                 <p>
@@ -43,7 +44,7 @@ const Service = () => {
               </div>
             </div>
             <div className="service-card">
-              <CircleDollarSign size={85} />
+              <img src="/paid.png" alt="" />
               <div className="service-card-text">
                 <h4>Great tariffs</h4>
                 <p>
