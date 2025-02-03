@@ -1,0 +1,100 @@
+.formContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .formCard {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .serviceTypes, .tripTypes {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .serviceButton, .tripButton {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .serviceButton.active, .tripButton.active {
+    background: #006400;
+    color: white;
+    border-color: #006400;
+  }
+  
+  .formFields {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .locationGroup, .dateTimeGroup {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .inputField {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .inputField label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .inputField input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .inputField input:focus {
+    outline: none;
+    border-color: #006400;
+  }
+  
+  .exploreButton {
+    width: 100%;
+    padding: 12px;
+    background: #006400;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .exploreButton:hover {
+    background: #005000;
+  }
+  
+  @media (max-width: 600px) {
+    .locationGroup, .dateTimeGroup {
+      flex-direction: column;
+    }
+    
+    .inputField {
+      width: 100%;
+    }
+  }

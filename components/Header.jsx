@@ -8,7 +8,7 @@ const header = () => {
         <Image src={"/logo.jpg"} width={130} height={50} alt="logo" />
       </div>
       <div className="header-middle">
-        <Image src={"/phoneNumber.png"} width={180} height={80} alt="logo" />
+        <Image src={"/phoneNumber.png"} width={200} height={70} alt="logo" />
       </div>
       <div className="header-right">
         <Download />

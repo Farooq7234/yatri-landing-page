@@ -1,4 +1,5 @@
 import React from "react";
+import TransportBookingForm from "@/components/TransportBookingForm";
 
 const Hero = () => {
   return (
@@ -14,12 +15,7 @@ const Hero = () => {
           <h2>Service Provider</h2>
         </div>
         <div className="hero-section-right">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel sint
-            est doloribus perspiciatis, possimus quaerat eius, incidunt dolor
-            suscipit quasi voluptas voluptates veniam? Praesentium, dignissimos
-            nam! Id molestias cum expedita.
-          </p>
+          <TransportBookingForm />
         </div>
       </div>
       <div className="hero-section-bottom">
