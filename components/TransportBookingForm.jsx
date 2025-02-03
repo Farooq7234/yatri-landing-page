@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "@/app/TransportBookingForm.module.css";
 
 const TransportBookingForm = () => {
+  // Initialize state values to ensure controlled inputs.
   const [serviceType, setServiceType] = useState("outstation");
   const [tripType, setTripType] = useState("oneWay");
   const [fromLocation, setFromLocation] = useState("");
@@ -11,18 +12,12 @@ const TransportBookingForm = () => {
   const [returnDate, setReturnDate] = useState("");
   const [pickUpTime, setPickUpTime] = useState("");
 
-  console.log(
-    fromLocation,
-    toLocation,
-    pickUpDate,
-    returnDate,
-    pickUpDate,
-    pickUpTime
-  );
+  console.log(fromLocation, toLocation, pickUpDate, returnDate, pickUpTime);
 
   return (
     <div className={styles.formContainer}>
       <div className={styles.formCard}>
+        {/* Service Types */}
         <div className={styles.serviceTypes}>
           <button
             className={`${styles.serviceButton} ${
@@ -50,6 +45,7 @@ const TransportBookingForm = () => {
           </button>
         </div>
 
+        {/* Trip Types */}
         <div className={styles.tripTypes}>
           <button
             className={`${styles.tripButton} ${
@@ -69,23 +65,38 @@ const TransportBookingForm = () => {
           </button>
         </div>
 
+        {/* Form Fields */}
         <div className={styles.formFields}>
           <div className={styles.locationGroup}>
             <div className={styles.inputField}>
               <label>FROM</label>
-              <input
-                type="text"
+              <select
+                value={fromLocation}
                 onChange={(e) => setFromLocation(e.target.value)}
-                placeholder="Enter pickup location"
-              />
+              >
+                <option value="" disabled>
+                  Select pickup location
+                </option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+              </select>
             </div>
             <div className={styles.inputField}>
               <label>TO</label>
-              <input
-                type="text"
+              <select
+                value={toLocation}
                 onChange={(e) => setToLocation(e.target.value)}
-                placeholder="Enter drop location"
-              />
+              >
+                <option value="" disabled>
+                  Select drop location
+                </option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bengaluru">Bengaluru</option>
+                <option value="Chennai">Chennai</option>
+              </select>
             </div>
           </div>
 
@@ -94,9 +105,8 @@ const TransportBookingForm = () => {
               <label>PICK UP DATE</label>
               <input
                 type="date"
-                onChange={(e) => {
-                  setPickUpDate(e.target.value);
-                }}
+                value={pickUpDate}
+                onChange={(e) => setPickUpDate(e.target.value)}
               />
             </div>
             {tripType === "roundTrip" && (
@@ -104,9 +114,8 @@ const TransportBookingForm = () => {
                 <label>RETURN DATE</label>
                 <input
                   type="date"
-                  onChange={(e) => {
-                    setReturnDate(e.target.value);
-                  }}
+                  value={returnDate}
+                  onChange={(e) => setReturnDate(e.target.value)}
                 />
               </div>
             )}
@@ -114,9 +123,8 @@ const TransportBookingForm = () => {
               <label>PICK UP AT</label>
               <input
                 type="time"
-                onChange={(e) => {
-                  setPickUpTime(e.target.value);
-                }}
+                value={pickUpTime}
+                onChange={(e) => setPickUpTime(e.target.value)}
               />
             </div>
           </div>
