@@ -24,7 +24,7 @@ const Choose = () => {
       <Image
         src={"/car-map.gif"}
         height={500}
-        width={700}
+        width={600}
         alt="car animation"
       />
     </section>

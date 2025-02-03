@@ -5,7 +5,7 @@ const Service = () => {
     <>
       <section className="service-section">
         <div className="service-main">
-          <img src="/rental-car.png" alt="" />
+          <img src="/rental-car.png" alt="" width={500} />
           <div className="service-cards">
             <h2>
               <span>WHY</span> YATRI ?
@@ -56,7 +56,7 @@ const Service = () => {
           </div>
         </div>
 
-        <div className="service-section-bottom">
+        <section className="service-section-bottom">
           <div className="service-section-b-cards">
             <div className="service-section-b-card">
               <h2>CAR TYPE</h2>
@@ -99,7 +99,7 @@ const Service = () => {
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </section>
     </>
   );
